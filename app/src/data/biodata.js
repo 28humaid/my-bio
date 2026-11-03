@@ -160,9 +160,9 @@ export const sections = [
             },
             details: [
               {
-                en: 'B.A. LL.B., Aligarh Muslim University (1994)',
-                hi: 'बी.ए. एलएल.बी., अलीगढ़ मुस्लिम विश्वविद्यालय (1994)',
-                ur: 'بی اے ایل ایل بی، علی گڑھ مسلم یونیورسٹی (1994)',
+                en: 'LL.B., Aligarh Muslim University (1994)',
+                hi: 'एलएल.बी., अलीगढ़ मुस्लिम विश्वविद्यालय (1994)',
+                ur: 'ایل ایل بی، علی گڑھ مسلم یونیورسٹی (1994)',
               },
               {
                 en: 'Chamber No. 566, Patiala House Courts Complex, New Delhi-110001',
