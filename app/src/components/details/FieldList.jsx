@@ -1,4 +1,4 @@
-import { LANGUAGE } from '../../constants/languages.js'
+// import { LANGUAGE } from '../../constants/languages.js'
 import useLanguage from '../../i18n/useLanguage.js'
 import Chip from '../common/Chip.jsx'
 import { FIELD_ICONS } from './fieldIcons.js'

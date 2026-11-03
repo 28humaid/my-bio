@@ -7,7 +7,7 @@ A React + Tailwind CSS site for a marriage biodata in **English, हिन्द
 - React 19 + Vite, with the React Compiler (automatic memoization)
 - Tailwind CSS v4 (`@tailwindcss/vite`)
 - ESLint (flat config)
-- GitHub Actions → GitHub Pages
+- GitHub Pages via `gh-pages`
 
 ## Getting started
 
@@ -24,6 +24,7 @@ npm run dev
 | `npm run lint`    | Lint with ESLint                   |
 | `npm run build`   | Production build into `dist/`      |
 | `npm run preview` | Serve the production build locally |
+| `npm run deploy`  | Lint, build and publish to GitHub Pages |
 
 ## Editing content
 
@@ -73,9 +74,17 @@ src/
 
 ## Deploying to GitHub Pages
 
-1. Push the repository to GitHub on the `main` branch.
-2. In the repository, go to **Settings → Pages → Build and deployment** and set **Source** to **GitHub Actions**.
-3. Each push to `main` builds and deploys automatically to `https://<username>.github.io/<repository>/`.
+Deployment uses the [`gh-pages`](https://www.npmjs.com/package/gh-pages) package, which publishes `dist/` to a `gh-pages` branch.
+
+One-time setup: in the repository, go to **Settings → Pages → Build and deployment**, set **Source** to **Deploy from a branch**, and choose **`gh-pages`** with the **`/ (root)`** folder. (The branch exists after the first deploy.)
+
+To publish or update the site, from the `app` folder:
+
+```bash
+npm run deploy
+```
+
+This lints, builds and pushes the site. It is live at `https://<username>.github.io/<repository>/` a minute or two later. Pushing source code to `main` does not update the site on its own.
 
 Sections can be linked directly: `#language`, `#details`, `#images`.
 
