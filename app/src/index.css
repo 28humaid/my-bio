@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+/* Design tokens: Royal Emerald */
+@theme {
+  --color-forest-dark: #0a2b20;
+  --color-forest: #0f3d2e;
+  --color-forest-light: #1e5a45;
+  --color-mint: #a9c3b6;
+  --color-gold: #b8913a;
+  --color-gold-light: #e3c77a;
+  --color-gold-dark: #6b5a33;
+  --color-cream: #fbf7ee;
+  --color-cream-dark: #f1ebd9;
+  --color-sand: #d9cba6;
+  --color-ink: #1c2b24;
+
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Mulish", system-ui, sans-serif;
+  --font-hindi: "Hind", "Mulish", system-ui, sans-serif;
+  --font-urdu: "Noto Nastaliq Urdu", serif;
+}
+
+@layer base {
+  html,
+  body {
+    @apply bg-cream text-ink antialiased;
+  }
+
+  /* Script-specific typography, switched by the lang attribute on <html> */
+  :lang(en) {
+    font-family: var(--font-body);
+  }
+  :lang(hi) {
+    font-family: var(--font-hindi);
+  }
+  :lang(ur) {
+    font-family: var(--font-urdu);
+  }
+}
+
+/*
+ * Nastaliq (Urdu) has tall ascenders and deep descenders, so lines collide at
+ * normal spacing, and it has no italic (browsers fake one by slanting it).
+ * Kept outside any @layer on purpose: unlayered CSS wins over Tailwind's
+ * leading-* and italic utilities, so this applies to every Urdu element.
+ */
+:lang(ur) {
+  line-height: 2.3;
+  font-style: normal;
+}
+
+@layer components {
+  /* Headings: serif in English, the script's own font otherwise */
+  .heading {
+    font-family: var(--font-display);
+    font-weight: 700;
+  }
+  :lang(hi) .heading {
+    font-family: var(--font-hindi);
+  }
+  :lang(ur) .heading {
+    font-family: var(--font-urdu);
+  }
+
+  /* Small label above a value; caps + tracking only suit Latin script */
+  .eyebrow {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--color-gold-dark);
+  }
+  :lang(en) .eyebrow {
+    font-size: 0.6875rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+}
