@@ -189,9 +189,9 @@ export const sections = [
             id: 'sister',
             relation: { en: 'Younger Sister', hi: 'छोटी बहन', ur: 'چھوٹی بہن' },
             role: {
-              en: 'Pursuing M.D. (General Medicine)',
-              hi: 'एम.डी. (जनरल मेडिसिन) अध्ययनरत',
-              ur: 'ایم ڈی (جنرل میڈیسن) زیرِ تعلیم',
+              en: 'Pursuing M.D. (Community Medicine)',
+              hi: 'एम.डी. (सामुदायिक चिकित्सा) अध्ययनरत',
+              ur: 'ایم ڈی (کمیونٹی میڈیسن) زیرِ تعلیم',
             },
             details: [
               {
@@ -235,9 +235,11 @@ export const sections = [
         id: 'maslak',
         icon: 'respect',
         text: {
-          en: 'Maslak is not a concern. Whether Sunni (Deobandi, Barelvi, Ahl-e-Hadith, etc.) or Shia, her beliefs and practices will be fully respected and accommodated.',
-          hi: 'मसलक से कोई फ़र्क़ नहीं पड़ता। चाहे सुन्नी (देवबंदी, बरेलवी, अहले हदीस आदि) हों या शिया, उनके अक़ीदे और अमल का पूरा सम्मान और ख़याल रखा जाएगा।',
-          ur: 'مسلک سے کوئی فرق نہیں پڑتا۔ خواہ سنی (دیوبندی، بریلوی، اہلِ حدیث وغیرہ) ہوں یا شیعہ، ان کے عقائد اور اعمال کا پورا احترام اور خیال رکھا جائے گا۔',
+          en: 'Maslak is not a concern. Whether Barelvi, Deobandi, Ahl-e-Hadith, etc., her beliefs and practices will be fully respected and accommodated.',
+
+hi: 'मसलक कोई मायने नहीं रखता। चाहे बरेलवी, देवबंदी, अहले हदीस आदि हों, उनके अक़ीदे और अमल का पूरा सम्मान किया जाएगा और उनका पूरा ख़याल रखा जाएगा।',
+
+ur: 'مسلک کوئی اہمیت نہیں رکھتا۔ خواہ بریلوی، دیوبندی، اہلِ حدیث وغیرہ ہوں، ان کے عقائد اور اعمال کا پورا احترام کیا جائے گا اور ان کا مکمل خیال رکھا جائے گا۔',
         },
       },
       {
@@ -251,9 +253,9 @@ export const sections = [
       },
     ],
     note: {
-      en: 'In shaa Allah, the hope is to build a home on mutual respect, love and mercy (Qur’an 30:21).',
-      hi: 'इंशाअल्लाह, उम्मीद है कि आपसी सम्मान, मोहब्बत और रहमत पर एक घर बसे (क़ुरआन 30:21)।',
-      ur: 'ان شاء اللہ، امید ہے کہ باہمی احترام، محبت اور رحمت پر ایک گھر بسے (قرآن 30:21)۔',
+      en: 'In shaa Allah, the hope is to build a home on mutual respect, love and mercy.',
+      hi: 'इंशाअल्लाह, उम्मीद है कि आपसी सम्मान, मोहब्बत और रहमत पर एक घर बसे।',
+      ur: 'ان شاء اللہ، امید ہے کہ باہمی احترام، محبت اور رحمت پر ایک گھر بسے ۔',
     },
   },
   {
