@@ -7,6 +7,12 @@ export const profile = {
   },
 }
 
+// Salutations shown before family members' names
+const SALUTATION = {
+  MR: { en: 'Mr.', hi: 'श्री', ur: 'جناب' },
+  MRS: { en: 'Mrs.', hi: 'श्रीमती', ur: 'محترمہ' },
+}
+
 /**
  * Qur'an verse shown at the very top of every page.
  * Translations: Urdu from Irfan-ul-Quran (Tahir-ul-Qadri), Hindi by Muhammad Faruq Khan.
@@ -95,9 +101,9 @@ export const sections = [
         icon: 'home',
         label: { en: 'Native place', hi: 'मूल निवास', ur: 'آبائی شہر' },
         value: {
-          en: 'Basni, Near Lal Bahadur Shastri International Airport, Varanasi',
-          hi: 'बसनी, लाल बहादुर शास्त्री अंतरराष्ट्रीय हवाई अड्डे के पास, वाराणसी',
-          ur: 'بسنی، لال بہادر شاستری بین الاقوامی ہوائی اڈے کے قریب، وارانسی'
+          en: 'Basni, Near Lal Bahadur Shastri International Airport (Babatpur Airport), Varanasi',
+          hi: 'बसनी, लाल बहादुर शास्त्री अंतरराष्ट्रीय हवाई अड्डे (बाबतपुर एयरपोर्ट) के पास, वाराणसी',
+          ur: 'بسنی، لال بہادر شاستری بین الاقوامی ہوائی اڈے (بابت پور ایئرپورٹ) کے قریب، وارانسی',
         },
       },
       {
@@ -108,15 +114,6 @@ export const sections = [
           { en: 'English', hi: 'अंग्रेज़ी', ur: 'انگریزی' },
           { en: 'Hindi', hi: 'हिन्दी', ur: 'ہندی' },
           { en: 'Urdu', hi: 'उर्दू', ur: 'اردو' },
-        ],
-      },
-      {
-        id: 'hobbies',
-        icon: 'hobbies',
-        label: { en: 'Hobbies', hi: 'शौक़', ur: 'مشاغل' },
-        value: [
-          { en: 'Cooking', hi: 'खाना बनाना', ur: 'کھانا پکانا' },
-          { en: 'Watching cricket', hi: 'क्रिकेट देखना', ur: 'کرکٹ دیکھنا' },
         ],
       },
     ],
@@ -135,12 +132,14 @@ export const sections = [
             id: 'paternalGrandfather',
             relation: { en: 'Paternal Grandfather', hi: 'दादा', ur: 'دادا' },
             name: { en: 'Abdul Gaffar', hi: 'अब्दुल ग़फ़्फ़ार', ur: 'عبدالغفار' },
+            salutation: SALUTATION.MR,
             isLate: true,
           },
           {
             id: 'maternalGrandfather',
             relation: { en: 'Maternal Grandfather', hi: 'नाना', ur: 'نانا' },
             name: { en: 'Mohammed Hashim', hi: 'मोहम्मद हाशिम', ur: 'محمد ہاشم' },
+            salutation: SALUTATION.MR,
             isLate: true,
           },
         ],
@@ -153,6 +152,7 @@ export const sections = [
             id: 'father',
             relation: { en: 'Father', hi: 'पिता', ur: 'والد' },
             name: { en: 'Alamgir', hi: 'आलमगीर', ur: 'عالمگیر' },
+            salutation: SALUTATION.MR,
             role: {
               en: 'Advocate, High Court of Delhi & Supreme Court of India',
               hi: 'अधिवक्ता, दिल्ली उच्च न्यायालय एवं भारत का सर्वोच्च न्यायालय',
@@ -175,6 +175,7 @@ export const sections = [
             id: 'mother',
             relation: { en: 'Mother', hi: 'माता', ur: 'والدہ' },
             name: { en: 'Shama Parveen', hi: 'शमा परवीन', ur: 'شمع پروین' },
+            salutation: SALUTATION.MRS,
             role: { en: 'Homemaker', hi: 'गृहिणी', ur: 'خانہ دار' },
             details: [{ en: 'M.A. Sociology', hi: 'एम.ए. समाजशास्त्र', ur: 'ایم اے سماجیات' }],
           },
@@ -219,24 +220,15 @@ export const sections = [
     // Rendered as a list of points with icons, plus an optional closing note
     id: 'expectations',
     type: 'points',
-    title: { en: 'Expectations', hi: 'अपेक्षाएँ', ur: 'توقعات' },
+    title: { en: 'About the Match', hi: 'रिश्ते के बारे में', ur: 'رشتے کے بارے میں' },
     points: [
-      {
-        id: 'character',
-        icon: 'character',
-        text: {
-          en: 'Seeking a life partner of good character and sound deen: kind, respectful and well-mannered, and preferably a few years younger.',
-          hi: 'अच्छे अख़लाक़ और दीनदार जीवनसाथी की तलाश है: दयालु, आदर करने वाली और सलीक़ेमंद, और उम्र में कुछ वर्ष छोटी हों तो बेहतर।',
-          ur: 'نیک سیرت اور دین دار شریکِ حیات کی تلاش ہے: نرم مزاج، باادب اور خوش اخلاق، اور ترجیحاً عمر میں چند سال چھوٹی۔',
-        },
-      },
       {
         id: 'home',
         icon: 'home',
         text: {
-          en: 'Preferably someone who would like to focus on home and family; her needs, comfort and well-being will be fully taken care of.',
-          hi: 'बेहतर होगा कि वह घर-परिवार पर ध्यान देना चाहें; उनकी ज़रूरतों, आराम और ख़ुशहाली का पूरा ख़याल रखा जाएगा।',
-          ur: 'ترجیحاً ایسی ہوں جو گھر اور خاندان پر توجہ دینا چاہیں؛ ان کی ضروریات، آرام اور خوشحالی کا پورا خیال رکھا جائے گا۔',
+          en: 'Preferably a few years younger, and someone who would like to focus on home and family; her needs, comfort and well-being will be fully taken care of.',
+          hi: 'बेहतर होगा कि वह उम्र में कुछ वर्ष छोटी हों और घर-परिवार पर ध्यान देना चाहें; उनकी ज़रूरतों, आराम और ख़ुशहाली का पूरा ख़याल रखा जाएगा।',
+          ur: 'ترجیحاً عمر میں چند سال چھوٹی ہوں اور گھر اور خاندان پر توجہ دینا چاہیں؛ ان کی ضروریات، آرام اور خوشحالی کا پورا خیال رکھا جائے گا۔',
         },
       },
       {
@@ -246,6 +238,15 @@ export const sections = [
           en: 'Maslak is not a concern. Whether Sunni (Deobandi, Barelvi, Ahl-e-Hadith, etc.) or Shia, her beliefs and practices will be fully respected and accommodated.',
           hi: 'मसलक से कोई फ़र्क़ नहीं पड़ता। चाहे सुन्नी (देवबंदी, बरेलवी, अहले हदीस आदि) हों या शिया, उनके अक़ीदे और अमल का पूरा सम्मान और ख़याल रखा जाएगा।',
           ur: 'مسلک سے کوئی فرق نہیں پڑتا۔ خواہ سنی (دیوبندی، بریلوی، اہلِ حدیث وغیرہ) ہوں یا شیعہ، ان کے عقائد اور اعمال کا پورا احترام اور خیال رکھا جائے گا۔',
+        },
+      },
+      {
+        id: 'dowry',
+        icon: 'dowry',
+        text: {
+          en: 'No dowry (jahez) will be asked for or accepted, in any form.',
+          hi: 'दहेज किसी भी रूप में न माँगा जाएगा, न लिया जाएगा।',
+          ur: 'جہیز کسی بھی صورت میں نہ مانگا جائے گا اور نہ لیا جائے گا۔',
         },
       },
     ],

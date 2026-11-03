@@ -45,8 +45,8 @@ All personal content lives in **`src/data/biodata.js`**.
 - The Qur'an verse at the top of the page is `verse` (`reference` and `text`).
 - Label/value fields can have an `icon` (a name from `src/components/details/fieldIcons.js`). Give `value` a list of `{ en, hi, ur }` items to show them as chips.
 - The Career & Education section (`type: 'career'`) holds `profession`, `organisation`, `workingSince`, `location`, `education` (a list, most recent first, each with `id`, `degree`, `institution`, `year`) and `linkedinUrl`. Remove `linkedinUrl` to hide the link.
-- A points section (`type: 'points'`, used for Expectations) has `points`, each with `id`, `icon` and `text`, plus an optional closing `note`.
-- The Family section (`type: 'family'`) is a list of `groups` (Grandparents, Parents, Siblings), each with `members`. A member has a `relation` and optionally a `name`, `isLate`, `role` and `details` lines.
+- A points section (`type: 'points'`, used for About the Match) has `points`, each with `id`, `icon` and `text`, plus an optional closing `note`.
+- The Family section (`type: 'family'`) is a list of `groups` (Grandparents, Parents, Siblings), each with `members`. A member has a `relation` and optionally a `salutation` (`SALUTATION.MR` or `SALUTATION.MRS`), `name`, `isLate`, `role` and `details` lines.
 
 Interface labels (tab names, headings, hints) are in `src/i18n/translations.js`.
 
@@ -86,7 +86,7 @@ npm run deploy
 
 This lints, builds and pushes the site. It is live at `https://<username>.github.io/<repository>/` a minute or two later. Pushing source code to `main` does not update the site on its own.
 
-Sections can be linked directly: `#language`, `#details`, `#images`.
+The site always opens on the Language page, even if the link ends in `#details` or `#images`. To change that, edit `DEFAULT_TAB` in `src/constants/tabs.js`.
 
 ## Privacy
 

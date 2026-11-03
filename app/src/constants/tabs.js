@@ -7,4 +7,5 @@ export const TAB = Object.freeze({
 /** Display order of the navigation tabs */
 export const TAB_ORDER = [TAB.LANGUAGE, TAB.DETAILS, TAB.IMAGES]
 
-export const DEFAULT_TAB = TAB.DETAILS
+/** Every visit starts here, whatever hash the link carries */
+export const DEFAULT_TAB = TAB.LANGUAGE

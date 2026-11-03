@@ -4,10 +4,11 @@ import useLanguage from '../../i18n/useLanguage.js'
 /**
  * One family member. Every field except `relation` is optional:
  * siblings have no name, grandparents have no role or details.
+ * `salutation` (Mr., Mrs.) is shown before the name.
  */
 export default function FamilyMemberCard({ member }) {
   const { t } = useLanguage()
-  const { relation, name, isLate = false, role, details = [] } = member
+  const { relation, salutation, name, isLate = false, role, details = [] } = member
   const hasName = Boolean(name)
 
   return (
@@ -21,14 +22,15 @@ export default function FamilyMemberCard({ member }) {
       <p className="eyebrow">{t(relation)}</p>
 
       {hasName && (
-        <h4 className={`heading leading-tight text-forest text-[18px] font-bold'}`}>
+        <h4 className="heading text-[18px] leading-tight font-bold text-forest">
           {isLate && <span className="text-gold-dark">{t(UI_TEXT.late)} </span>}
+          {salutation && `${t(salutation)} `}
           {t(name)}
         </h4>
       )}
 
       {role && (
-        <p className={`font-bold text-[12px]`}>{t(role)}</p>
+        <p className="text-[12px] font-bold">{t(role)}</p>
       )}
 
       {details.length > 0 && (

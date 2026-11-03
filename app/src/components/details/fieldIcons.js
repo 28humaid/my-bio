@@ -7,7 +7,6 @@ import {
   MapPinIcon,
   PhoneIcon,
   RulerIcon,
-  StarIcon,
   UsersIcon,
 } from '../common/Icons.jsx'
 
@@ -19,8 +18,7 @@ export const FIELD_ICONS = Object.freeze({
   home: HomeIcon,
   residence: BuildingIcon,
   languages: LanguagesIcon,
-  hobbies: HeartIcon,
-  character: StarIcon,
   respect: UsersIcon,
+  dowry: HeartIcon,
   phone: PhoneIcon,
 })

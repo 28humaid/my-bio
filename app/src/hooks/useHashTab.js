@@ -7,13 +7,20 @@ function readTabFromHash() {
 }
 
 /**
- * Active tab, mirrored in the URL hash (#language, #details, #images) so
- * links can open a specific section and the browser Back button works.
+ * Active tab, mirrored in the URL hash (#language, #details, #images) so the
+ * browser Back button moves between tabs. Every visit opens on DEFAULT_TAB,
+ * even when the link or a page refresh carries another tab's hash.
  */
 export default function useHashTab() {
-  const [activeTab, setActiveTabState] = useState(() => readTabFromHash() ?? DEFAULT_TAB)
+  const [activeTab, setActiveTabState] = useState(DEFAULT_TAB)
 
   useEffect(() => {
+    // Drop a hash left over from a shared link or refresh, without adding a history entry
+    if (window.location.hash) {
+      const { pathname, search } = window.location
+      window.history.replaceState(null, '', pathname + search)
+    }
+
     const handleHashChange = () => setActiveTabState(readTabFromHash() ?? DEFAULT_TAB)
     window.addEventListener('hashchange', handleHashChange)
     return () => window.removeEventListener('hashchange', handleHashChange)
