@@ -4,6 +4,7 @@ import {
   HeartIcon,
   HomeIcon,
   LanguagesIcon,
+  LinkIcon,
   MapPinIcon,
   PhoneIcon,
   RulerIcon,
@@ -19,6 +20,7 @@ export const FIELD_ICONS = Object.freeze({
   residence: BuildingIcon,
   languages: LanguagesIcon,
   respect: UsersIcon,
+  families: LinkIcon,
   dowry: HeartIcon,
   phone: PhoneIcon,
 })
