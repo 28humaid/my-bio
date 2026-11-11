@@ -294,10 +294,10 @@ export const photos = [
     file: 'formalpic.jpeg',
     // caption: { en: 'Formal', hi: 'औपचारिक', ur: 'رسمی' },
   },
-  {
-    id: 'halfBody',
-    file: 'halfBody.jpeg',
-    // caption: { en: 'Traditional', hi: 'पारंपरिक', ur: 'روایتی' },
-  },
+  // {
+  //   id: 'halfBody',
+  //   file: 'halfBody.jpeg',
+  //   // caption: { en: 'Traditional', hi: 'पारंपरिक', ur: 'روایتی' },
+  // },
 
 ]
