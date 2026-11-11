@@ -226,9 +226,9 @@ export const sections = [
         id: 'home',
         icon: 'home',
         text: {
-          en: 'Preferably a few years younger, and someone who would like to focus on home and family; her needs, comfort and well-being will be fully taken care of.',
-          hi: 'बेहतर होगा कि वह उम्र में कुछ वर्ष छोटी हों और घर-परिवार पर ध्यान देना चाहें; उनकी ज़रूरतों, आराम और ख़ुशहाली का पूरा ख़याल रखा जाएगा।',
-          ur: 'ترجیحاً عمر میں چند سال چھوٹی ہوں اور گھر اور خاندان پر توجہ دینا چاہیں؛ ان کی ضروریات، آرام اور خوشحالی کا پورا خیال رکھا جائے گا۔',
+          en: 'Preferably a few years younger, and someone who would like to focus on home and family; her needs and well-being will be taken care of.',
+          hi: 'बेहतर होगा कि वह उम्र में कुछ वर्ष छोटी हों और घर-परिवार पर ध्यान देना चाहें; उनकी ज़रूरतों और ख़ुशहाली का पूरा ख़याल रखा जाएगा।',
+          ur: 'ترجیحاً عمر میں چند سال چھوٹی ہوں اور گھر اور خاندان پر توجہ دینا چاہیں؛ ان کی ضروریات اور خوشحالی کا پورا خیال رکھا جائے گا۔',
         },
       },
       {
