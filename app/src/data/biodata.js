@@ -285,13 +285,19 @@ export const sections = [
  */
 export const photos = [
   {
+    id: 'formal1',
+    file: 'DSCN1760.JPG',
+    // caption: { en: 'Casual', hi: 'साधारण', ur: 'عام' },
+  },
+  {
     id: 'formal',
     file: 'formalpic.jpeg',
     // caption: { en: 'Formal', hi: 'औपचारिक', ur: 'رسمی' },
   },
   {
-    id: 'traditional',
-    file: 'kurtapajamapic.jpeg',
+    id: 'halfBody',
+    file: 'halfBody.jpeg',
     // caption: { en: 'Traditional', hi: 'पारंपरिक', ur: 'روایتی' },
   },
+
 ]
