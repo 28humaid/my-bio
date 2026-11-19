@@ -210,7 +210,18 @@ export const sections = [
             id: 'brother',
             relation: { en: 'Younger Brother', hi: 'छोटा भाई', ur: 'چھوٹا بھائی' },
             role: { en: 'Student', hi: 'विद्यार्थी', ur: 'طالب علم' },
-            details: [{ en: 'Class 12, Humanities', hi: 'कक्षा 12, मानविकी', ur: 'بارہویں جماعت، ہیومینٹیز' }],
+            details: [
+              { 
+                en: 'Class 12, Humanities', 
+                hi: 'कक्षा 12, मानविकी', 
+                ur: 'بارہویں جماعت، ہیومینٹیز' 
+              },
+              {
+                en: 'New Horizon School, New Delhi',
+                hi: 'न्यू होराइज़न स्कूल, नई दिल्ली',
+                ur: 'نیو ہورائزن اسکول، نئی دہلی',
+              }
+            ],
           },
         ],
       },
@@ -249,15 +260,15 @@ export const sections = [
           ur: 'مسلک کوئی اہمیت نہیں رکھتا۔ خواہ بریلوی، دیوبندی، اہلِ حدیث وغیرہ ہوں، ان کے عقائد اور اعمال کا پورا احترام کیا جائے گا اور ان کا مکمل خیال رکھا جائے گا۔',
         },
       },
-      {
-        id: 'dowry',
-        icon: 'dowry',
-        text: {
-          en: 'No dowry (jahez) will be asked for or accepted, in any form.',
-          hi: 'दहेज किसी भी रूप में न माँगा जाएगा, न लिया जाएगा।',
-          ur: 'جہیز کسی بھی صورت میں نہ مانگا جائے گا اور نہ لیا جائے گا۔',
-        },
-      },
+      // {
+      //   id: 'dowry',
+      //   icon: 'dowry',
+      //   text: {
+      //     en: 'No dowry (jahez) will be asked for or accepted, in any form.',
+      //     hi: 'दहेज किसी भी रूप में न माँगा जाएगा, न लिया जाएगा।',
+      //     ur: 'جہیز کسی بھی صورت میں نہ مانگا جائے گا اور نہ لیا جائے گا۔',
+      //   },
+      // },
     ],
     note: {
       en: 'In shaa Allah, the hope is to build a home on mutual respect, love and mercy.',
